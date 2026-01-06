@@ -20,6 +20,5 @@ jobs:
 
     - name: Build and push
       run: |
-        docker build -t DOCKERHUB_USER/sample-app:${{ github.sha }} .
-        docker push DOCKERHUB_USER/sample-app:${{ github.sha }}
-
+        docker build -t DOCKERHUB_USER/sample-app:${{ github.ref_name }} .
+        docker push DOCKERHUB_USER/sample-app:${{ github.ref_name }}
